@@ -22,6 +22,27 @@ print(count_vowels("APPLE"))
 # find_duplicates([1, 2, 2, 3, 4, 4, 4])
 # # {2, 4}
 
+#my notes: 
+        #create an empty set called single
+        # create an empty set called dup 
+        # iterate through the list 
+        # If statement and in operator to find the duplicate 
+        # return the value to single and dup if its in twice 
+def duplicates(list):
+    seen = set()
+    dup = set()
+    for number in list:
+        if number in seen: 
+            dup.add(number)
+        else: 
+            seen.add(number)
+    return dup
+
+print(duplicates([1, 2, 2, 3, 4, 4, 4]))
+            
+
+
+
 # 3. Reverse Words
 # Reverse the order of words in a sentence.
 

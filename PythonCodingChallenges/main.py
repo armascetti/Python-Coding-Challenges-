@@ -67,6 +67,24 @@ reverse_words("Hi me")
 
 # word_frequency("cat dog cat bird")
 # # {'cat': 2, 'dog': 1, 'bird': 1}
+
+def word_frequency(sentence):
+    words = sentence.split()
+    #need to split the sentence into individual words 
+    count = {}
+    #declare an empty dictionary, to store the word counts  
+
+    for word in words:
+        #iterate through the words in order to count 
+        if word in count: 
+        #is it already a key in the dictionary? 
+            count[word] += 1
+            #Yes it is add it by 1 
+        else: #first time seeing the word 
+            count[word] = 1 
+            # first time seeing it, start the  count with 1 
+    print(count)
+
 # Intermediate
 
 # 5. Validate Patient Records

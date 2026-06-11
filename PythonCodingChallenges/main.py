@@ -23,7 +23,7 @@ print(count_vowels("APPLE"))
 # # {2, 4}
 
 #my notes: 
-        #create an empty set called single
+        #create an empty set called single (a set wont repeat the number when added)
         # create an empty set called dup 
         # iterate through the list 
         # If statement and in operator to find the duplicate 
@@ -41,13 +41,26 @@ def duplicates(list):
 print(duplicates([1, 2, 2, 3, 4, 4, 4]))
             
 
-
-
 # 3. Reverse Words
 # Reverse the order of words in a sentence.
 
 # reverse_words("python is fun")
 # # "fun is python"
+
+def reverse_words(sentence):
+    words = sentence.split()
+    #declare a variable and split the sentence 
+    reversed_sentence = []
+    #declare a new variable with an empty list that the new sentence can be put into 
+
+    for i in range(len(words) -1, -1, -1):
+        #this for loop decrements through the sentence one by one 
+        check = reversed_sentence.append(words[i])
+        #this will create the reversed sentence 
+    print(" ".join(reversed_sentence))
+
+reverse_words("Hi me")
+    
 
 # 4. Dictionary Frequency Counter
 # Count how many times each word appears.

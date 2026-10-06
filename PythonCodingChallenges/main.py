@@ -1,5 +1,4 @@
 #coding challenges to keep my skills sharp. I asked AI to provide me with intverview style coding challenges to solve. 
-#Copied and pasted those problems here and solved them without the use of AI. 
 
 # Easy
 
@@ -95,6 +94,31 @@ def word_frequency(sentence):
 # Validate age >= 18
 # Return a list of invalid fields
 
+
+{
+    "patient_id": "P1001",
+    "age": 34,
+    "gender": "Female",
+    "diagnosis": "Hypertension"
+}
+
+def validate_patient(record):
+    required_keys = ["patient_id", "age", "gender", "diagnosis"]
+    errors = []
+
+    for key in required_keys:
+        if key not in record:
+            errors.append(f"Missing field: {key}")
+
+    if "patient_id" in record:
+        if not record["patient_id"].startswith("P") or not record["patient_id"][1:].isdigit():
+            errors.append("Invalid patient_id format")
+
+    if "age" in record:
+        if record["age"] < 18:
+            errors.append("Age must be >= 18")
+
+    return errors
 # 6. Two Sum
 # Find two numbers that add up to a target.
 
@@ -178,13 +202,6 @@ def word_frequency(sentence):
 #     "missing": ["AWS", "Docker"]
 # }
 
-# This is actually a decent portfolio project because it demonstrates:
-
-# strings
-# sets
-# dictionaries
-# simple NLP concepts
-# Good Interview Challenge
 
 # 12. Log File Analyzer
 
@@ -211,16 +228,4 @@ def word_frequency(sentence):
 # loops
 # string methods
 
-# and is very similar to work you might do in government/enterprise software.
 
-# A good progression for the next week would be:
-
-# Count Vowels
-# Find Duplicates
-# Dictionary Frequency Counter
-# Two Sum
-# Bank Account Class
-# Resume Keyword Scanner
-# Log File Analyzer
-
-# That sequence covers most of the Python, data structures, and OOP concepts likely to come up in an entry-level software engineering interview.
